@@ -24,6 +24,7 @@ execute as @e[type=item_frame,...] run function ifh:api/free
 ## Hook
 
 入れる/外す/回転したときに発火するファンクションタグ
+
 実行者は該当する額縁自身
 
 ```mcfunction
