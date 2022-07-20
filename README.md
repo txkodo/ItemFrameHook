@@ -12,13 +12,13 @@ ItemFrameにアイテムを入れる/外す/回転できるかどうかを設定
 
 ```mcfunction
 # 回転 × 入れる × 取得 ×
-execute as @e[type=item_frame,...] run function #ifh:api/fixed
+execute as @e[type=item_frame,...] run function ifh:api/fixed
 
 # 回転 ○ 入れる × 取得 ×
-execute as @e[type=item_frame,...] run function #ifh:api/rot
+execute as @e[type=item_frame,...] run function ifh:api/rot
 
 # 回転 ○ 入れる ○ 取得 ○
-execute as @e[type=item_frame,...] run function #ifh:api/free
+execute as @e[type=item_frame,...] run function ifh:api/free
 ```
 
 ## Hook
