@@ -1,6 +1,5 @@
 
 #>
 # @internal
-  #declare tag ifh.frame
-  #declare storage ifh:temp
-  #declare storage ifh:item_frame
+  #declare tag ifh
+  #declare storage ifh:core
