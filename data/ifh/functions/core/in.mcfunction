@@ -1,4 +1,4 @@
-function #ifh:on_put
+function #ifh:on_in
 
 data modify entity @s[tag=ifh.O] Invulnerable set value 0b
 data modify entity @s[tag=!ifh.O] Invulnerable set value 1b

@@ -1,4 +1,4 @@
-function #ifh:on_pick
+function #ifh:on_out
 data modify entity @s Invulnerable set value 1b
 execute if entity @s[tag=!ifh.I] run data modify entity @s Fixed set value 1b
 tag @s remove ifh.H
