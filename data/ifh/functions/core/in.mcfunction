@@ -1,6 +1,9 @@
 function #ifh:on_put
-data modify entity @s Invulnerable set value 0b
 
+data modify entity @s[tag=ifh.O] Invulnerable set value 0b
+data modify entity @s[tag=!ifh.O] Invulnerable set value 1b
+
+tag @s add ifh.H
 # 回転角に応じたタグをつける
 data modify storage ifh:core byte set from entity @s ItemRotation
 execute if data storage ifh:core {byte:0b} unless entity @s[tag=ifh.0] run tag @s add ifh.0

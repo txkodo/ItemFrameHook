@@ -1,5 +1,7 @@
 function #ifh:on_pick
 data modify entity @s Invulnerable set value 1b
+execute if entity @s[tag=!ifh.I] run data modify entity @s Fixed set value 1b
+tag @s remove ifh.H
 
 # 回転角タグを削除
 tag @s remove ifh.0
