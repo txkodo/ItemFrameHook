@@ -1,6 +1,6 @@
 # ItemFrameHook
-ItemFrameにアイテムを入れる/外す/回転できるかどうかを管理し、
-入れる/外す/回転したときに発火するファンクションタグを追加する
+ItemFrameにアイテムを入れられる/外せる/回せるかどうかを管理し、
+入れる/外す/回したときに発火するファンクションタグを追加する
 
 # 動作確認済みバージョン
 + 1.19
@@ -8,32 +8,50 @@ ItemFrameにアイテムを入れる/外す/回転できるかどうかを管理
 # 使い方
 
 ## Api
-ItemFrameにアイテムを入れる/外す/回転できるかどうかを設定する
+
+アイテムを入れられる/外せる/回せるかどうかを設定する
+
+実行者を額縁にすること
 
 ```mcfunction
-# 回転 × 入れる × 取得 ×
-execute as @e[type=item_frame,...] run function ifh:api/fixed
+# 入れる × 外す × 回す × 
+function ifh:api/none
 
-# 回転 ○ 入れる × 取得 ×
-execute as @e[type=item_frame,...] run function ifh:api/rot
+# 入れる ○ 外す × 回す × 
+function ifh:api/in
 
-# 回転 ○ 入れる ○ 取得 ○
-execute as @e[type=item_frame,...] run function ifh:api/free
+# 入れる × 外す ○ 回す × 
+function ifh:api/out
+
+# 入れる ○ 外す ○ 回す × 
+function ifh:api/in_out
+
+# 入れる × 外す × 回す ○
+function ifh:api/rot
+
+# 入れる ○ 外す × 回す ○ 
+function ifh:api/in_rot
+
+# 入れる × 外す ○ 回す ○ 
+function ifh:api/out_rot
+
+# 入れる ○ 外す ○ 回す ○ 
+function ifh:api/in_out_rot
 ```
 
 ## Hook
 
-入れる/外す/回転したときに発火するファンクションタグ
+アイテムを入れる/外す/回したときに発火するファンクションタグ
 
 実行者は該当する額縁自身
 
 ```mcfunction
 #外した時に発火
-function #ifh:on_pick
+function #ifh:on_out
 
 #入れたときに発火
-function #ifh:on_pick
+function #ifh:on_in
 
-#回転したときに発火
-function #ifh:on_pick
+#回したときに発火
+function #ifh:on_rot
 ```
