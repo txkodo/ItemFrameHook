@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "framed": {
+      "trigger": "tick"
+    }
+  },
+  "rewards": {
+    "function": "ifh:core/on_tick"
+  }
+}

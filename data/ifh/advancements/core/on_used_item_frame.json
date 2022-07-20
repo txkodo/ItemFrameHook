@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "framed": {
+      "trigger": "player_interacted_with_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "item_frame"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "ifh:core/on_used_item_frame"
+  }
+}
