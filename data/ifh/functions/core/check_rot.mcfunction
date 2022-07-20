@@ -10,4 +10,4 @@ execute store success storage ifh:core success byte 1 if data storage ifh:core {
 execute store success storage ifh:core success byte 1 if data storage ifh:core {byte:6b} unless entity @s[tag=ifh.6] run tag @s add ifh.6
 execute store success storage ifh:core success byte 1 if data storage ifh:core {byte:7b} unless entity @s[tag=ifh.7] run tag @s add ifh.7
 
-execute if data storage ifh:core {success:1b} run function ifh:core/tick.as.rot
+execute if data storage ifh:core {success:1b} run function ifh:core/rot
