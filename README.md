@@ -37,6 +37,12 @@ function ifh:api/out_rot
 
 # 入れる ○ 外す ○ 回す ○ 
 function ifh:api/in_out_rot
+
+# 回転方向を時計回りに
+function ifh:api/clockwise
+
+# 回転方向を反時計回りに
+function ifh:api/counterclockwise
 ```
 
 ## Hook
