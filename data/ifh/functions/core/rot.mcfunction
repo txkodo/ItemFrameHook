@@ -1,5 +1,3 @@
-function #ifh:on_rot
-
 execute if entity @s[tag=ifh.CCW] run function ifh:core/ccw
 
 execute if data storage ifh:core {byte:0b} run tag @s add ifh.0
@@ -10,3 +8,5 @@ execute if data storage ifh:core {byte:4b} run tag @s add ifh.4
 execute if data storage ifh:core {byte:5b} run tag @s add ifh.5
 execute if data storage ifh:core {byte:6b} run tag @s add ifh.6
 execute if data storage ifh:core {byte:7b} run tag @s add ifh.7
+
+function #ifh:on_rot
